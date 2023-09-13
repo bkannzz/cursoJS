@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS</title>
+</head>
+<body>
+    <h1>Sistema de Países</h1> 
+    Qual país você mora <input type="text" name="texto" id="texto">
+    <input type="button" value="enviar" onclick="mostrar()">
+    <div id="pais">
+
+    </div>
+    <script>
+        function mostrar(){
+           var text = window.document.getElementById('input#texto') 
+
+           var pais = window.document.getElementById('div#pais')
+
+           pais.innerHTML = `Seu país é ${pais}`
+        }
+    </script>
+</body>
+</html>
