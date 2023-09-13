@@ -8,17 +8,26 @@
 <body>
     <h1>Sistema de Países</h1> 
     Qual país você mora <input type="text" name="texto" id="texto">
-    <input type="button" value="enviar" onclick="mostrar()">
+    <input type="button" value="Enviar" onclick="mostrar()">
     <div id="pais">
-
     </div>
     <script>
         function mostrar(){
-           var text = window.document.getElementById('input#texto') 
+           var text = window.document.querySelector('input#texto') 
 
-           var pais = window.document.getElementById('div#pais')
+           var pais = window.document.querySelector('div#pais')
 
-           pais.innerHTML = `Seu país é ${pais}`
+           var resposta = (text.value)
+
+           pais.innerHTML = `<p>Vivendo em ${resposta}</p>`
+
+           if (resposta == 'Brasil'){
+            pais.innerHTML += `<p>Você é Brasileiro!</p>`
+           } else{
+            pais.innerHTML += `<p>Você é Estrangeiro!</p>`
+           }
+
+           pais.innerHTML += '<p>Descubra se você e <strong>estrangeiro</strong> ou <strong>brasileiro</strong> de acordo com seu país.</p>'
         }
     </script>
 </body>
