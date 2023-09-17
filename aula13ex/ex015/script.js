@@ -7,8 +7,8 @@ function verificar() {
         window.alert('[ERRO] Verifique os dados e tente novamente!') 
     } else{
         var fsex = document.getElementsByName('radsex')
-        var idade = ano - Number(fano.value)
-        var genero = ''
+        var idade = ano - Number(fano.value) //Principal
+        var genero = '' //Principal
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
         if (fsex[0].checked){
